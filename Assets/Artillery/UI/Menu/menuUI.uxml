@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Artillery/UI/Menu/ui.uss?fileID=7433441132597879392&amp;guid=f7ac12b309d965be9b9a3f4e3b5fd808&amp;type=3#ui" />
+    <ui:VisualElement name="Menu" style="flex-grow: 1; width: 42%; height: 70%; position: relative; top: auto; left: auto; justify-content: flex-start; align-items: center; align-self: center; margin-top: 60px; margin-right: 60px; margin-bottom: 60px; margin-left: 60px; flex-direction: column; flex-wrap: nowrap; padding-top: 90px;">
+        <ui:Button text="Начать" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" class="menu-button" />
+        <ui:Button text="Выбор уровня" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LevelChoose" class="menu-button" style="bottom: -26px;" />
+        <ui:Button text="Выход" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Exit" class="menu-button menu-red-button" style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; transform-origin: bottom; -unity-text-align: middle-center; justify-content: center; bottom: -81px; width: 402px;" />
+    </ui:VisualElement>
+</ui:UXML>

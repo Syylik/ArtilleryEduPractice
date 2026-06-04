@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.83, y: -1.68, z: 0}
-  m_LocalScale: {x: 0.35373387, y: 0.35373387, z: 0.35373387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92a072446de4d4691fee23d21fe0bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  destroyEffect: {fileID: 1254561549865005946, guid: 4298ec6f45899d6e398a2694b704eb8f, type: 3}
 --- !u!212 &238454304022562534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,8 +89,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 174211637, guid: b81e687f149d4f2dd802a095a12a50e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,7 +135,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 0.31
 --- !u!50 &-3001732730107269882
 Rigidbody2D:
   serializedVersion: 4

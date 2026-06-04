@@ -1,6 +1,5 @@
 using Artillery.Scripts.Player;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace Artillery.Scripts.ShootSystem
 {
@@ -16,14 +15,19 @@ namespace Artillery.Scripts.ShootSystem
 
         [SerializeField] private float shootRate = 0.5f;
         private float _timeToNextShoot;
+
+        [SerializeField] private float effectMagnitude = 0.42f;
         
         [SerializeField] private float bulletCount;
+        [SerializeField] private float muzzleRotOffset = 45f;
+        [SerializeField] private Transform muzzleRotateOrigin;
 
         private void OnEnable() => input.OnValueUpdated += UpdateMuzzle;
 
         private void UpdateMuzzle(float force, float angle)
         {
-            muzzle.localRotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            // muzzle.RotateAround();
+            muzzle.localRotation = Quaternion.Euler(0, 0, angle - muzzleRotOffset);
             trajectory.UpdateTrajectory(force, angle);
         }
 
@@ -48,6 +52,7 @@ namespace Artillery.Scripts.ShootSystem
         {
             Projectile projectile = Instantiate(projectilePrefab);
             projectile.Launch(shootPoint.position, force, angle);
+            CameraEffect.Instance.Shake(0.1f, effectMagnitude);
         }
 
         private void OnDisable() => input.OnValueUpdated -= UpdateMuzzle;

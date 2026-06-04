@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Artillery/Scenes/Gameplay.unity
+    path: Assets/Artillery/_Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Artillery/_Scenes/Gameplay.unity
+    guid: 197a9346832b58266a8dbe81b0d7b798
   m_configObjects: {}
